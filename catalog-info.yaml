@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: p2p27xwjh-nodejs-gitops
+  description: This is GitOps manifest for p2p27xwjh-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=p2p27xwjh-nodejs
+    backstage.io/kubernetes-id: p2p27xwjh-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: p2p27xwjh-nodejs
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:p2p27xwjh-nodejs
